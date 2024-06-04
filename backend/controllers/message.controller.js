@@ -40,9 +40,16 @@ export const sendMessage = async (req, res) => {
             conversation.messages.push(newMessage._id);
         }
 
-        // DB에 저장하려면 save 해야함!!
-        await newMessage.save();
-        await conversation.save();
+        // SOCKET IO
+
+
+
+        // DB에 저장하려면 save 해야함!! 아래는 순차적으로 처리되는 코드.
+        // await newMessage.save();
+        // await conversation.save();
+
+        // 동시에 처리됨
+        await Promise.all([newMessage.save(), conversation.save()]);
         
         res.status(201).json(newMessage);
 
@@ -51,3 +58,26 @@ export const sendMessage = async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 };
+
+
+export const getMessages = async (req, res) => {
+    try {
+        const {id:userToChatId} = req.params;
+        const senderId = req.user._id; 
+        const conversation = await Conversation.findOne({
+            participants: {
+                $all: [senderId, userToChatId]
+            },
+        }).populate("messages"); // messages array에 push한다.
+
+        if(!conversation) return res.status(200).json([]);
+
+        const messages = conversation.messages;
+
+        res.status(200).json(messages);
+        
+    } catch (error) {
+        console.log("Error in login", error);
+        res.status(500).json({ error: error.message });
+    }
+}
