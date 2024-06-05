@@ -7,3 +7,5 @@
 - REACT
 - Socket.io
 - MongoDB
+- Tailwind
+- DaisyUI
