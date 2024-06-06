@@ -1,4 +1,4 @@
-## 실시간 채팅 앱
+## [프로젝트] 실시간 채팅 앱
 
 ### 🐣 목적
 - 새로운 자바스크립트 기반의 프레임워크 및 라이브러리를 학습하기 위해 해당 프로젝트를 선택함.
@@ -21,6 +21,12 @@
 - Daisy UI
 
 #### * 해당 프로젝트는 유튜브를 참고하여 **학습 목적으로** 제작하였습니다. (https://youtu.be/HwCqsOis894?si=hBzATnpCgUamcEKE)
+
+#### * 참고 자료
+- https://tailwindcss-glassmorphism.vercel.app/
+- https://react-hot-toast.com/
+- https://zustand-demo.pmnd.rs/
+- https://github.com/boringdesigners/boring-avatars-service/blob/main/README.md
 ---
 ## 👀 작업 중 입니다. (24.06.05) <br><br>
 
