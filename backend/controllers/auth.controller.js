@@ -1,18 +1,17 @@
 import User from '../models/user.model.js';
 import bcrypt from 'bcryptjs';
 import generateTokenAndSetCookie from '../utils/generateToken.js';
-//import bcrypt from 'bcryptjs';
 
 export const signup = async (req, res) => {
     try {
         const { fullName, username, password, confirmPassword, gender } = req.body;
-        
-        if(password !== confirmPassword){
+
+        if (password !== confirmPassword) {
             return res.status(400).json({ error: "Passwords do not match" });
         }
 
         const userExists = await User.findOne({ username });
-        
+
         if (userExists) {
             return res.status(400).json({ error: "User already exists" });
         }
@@ -20,33 +19,35 @@ export const signup = async (req, res) => {
         // hash password HERE
         const salt = await bcrypt.genSalt(10);
         const hashedPassword = await bcrypt.hash(password, salt);
-        
-        // https:avater-placeholder.iran.liara.run
-        const boyProfilePic = `https://avatar.iran.liara.run/public/boy?username=${username}`
-        const girlProfilePic = `https://avatar.iran.liara.run/public/girl?username=${username}`
 
-    const newUser = new User({
-        fullName,
-        username,
-        password: hashedPassword,
-        gender,
-        profilePic: gender === "male" ? boyProfilePic : girlProfilePic
-    });
+        // https:avater-placeholder.iran.liara.run : 갑자기 사이트 접속이 안된다.
+        // const boyProfilePic = `https://avatar.iran.liara.run/public/boy?username=${username}`
+        // const girlProfilePic = `https://avatar.iran.liara.run/public/girl?username=${username}`
+        const profilePic = `https://source.boringavatars.com/beam/200/username=${username}`;
     
-    if(newUser){
-        // generate JWT token
-        generateTokenAndSetCookie(newUser._id, res);
-        await newUser.save();
-    }
 
-    res.status(201).json({
-        _id: newUser._id,
-        fullName: newUser.fullName,
-        username: newUser.username,
-        profilePic: newUser.profilePic  
-    })
+        const newUser = new User({
+            fullName,
+            username,
+            password: hashedPassword,
+            gender,
+            profilePic
+        });
 
-    } catch(error){
+        if (newUser) {
+            // generate JWT token
+            generateTokenAndSetCookie(newUser._id, res);
+            await newUser.save();
+        }
+
+        res.status(201).json({
+            _id: newUser._id,
+            fullName: newUser.fullName,
+            username: newUser.username,
+            profilePic: newUser.profilePic
+        })
+
+    } catch (error) {
         console.log("Error in signup", error);
         res.status(500).json({ error: error.message });
     }
@@ -55,8 +56,8 @@ export const signup = async (req, res) => {
 export const login = async (req, res) => {
     try {
         const { username, password } = req.body;
-        console.log("Request body:", req.body); 
-        
+        console.log("Request body:", req.body);
+
         const user = await User.findOne({ username });
         if (!user) {
             console.log("User not found");
@@ -79,9 +80,9 @@ export const login = async (req, res) => {
             _id: user._id,
             fullName: user.fullName,
             username: user.username,
-            profilePic: user.profilePic  
+            profilePic: user.profilePic
         });
-        
+
     } catch (error) {
         console.log("Error in login", error);
         res.status(500).json({ error: error.message });
@@ -92,8 +93,8 @@ export const login = async (req, res) => {
 
 export const logout = (req, res) => {
     try {
-        res.cookie("jwt","",{maxAge:0});
-        res.status(200).json({message:"Logged out successfully"})
+        res.cookie("jwt", "", { maxAge: 0 });
+        res.status(200).json({ message: "Logged out successfully" })
     } catch (error) {
         console.log("Error in login", error);
         res.status(500).json({ error: error.message });

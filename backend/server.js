@@ -9,11 +9,12 @@ import messageRoutes from "./routes/message.routes.js";
 import userRoutes from "./routes/user.routes.js";
 
 import connectToMongoDB from "./db/connectToMongoDB.js";
+import { app, server } from "./socket/socket.js"; // socket.js에서 생성 후 import
 
 dotenv.config();
 
 // variables
-const app = express();
+// const app = express(); -> socket.js로 옮김.
 const PORT = process.env.PORT || 5000;
 
 connectToMongoDB();
@@ -26,7 +27,7 @@ app.use("/api/auth", authRoutes)
 app.use("/api/messages", messageRoutes)
 app.use("/api/users", userRoutes)
 
-app.listen(PORT, () => {
+server.listen(PORT, () => { // socket 생성 후 app을 server로 변경함.
     connectToMongoDB();
     console.log(`서버 ${PORT} 포트에서 돌아가는 중 `)
 });
