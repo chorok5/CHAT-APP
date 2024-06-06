@@ -3,6 +3,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
 import path from "path";
+import cors from "cors";
 
 // 파일 import
 import authRoutes from "./routes/auth.routes.js";
@@ -23,6 +24,7 @@ const __dirname = path.resolve(); // 배포 준비
 connectToMongoDB();
 
 // 미들웨어 
+app.use(cors());
 app.use(express.json()); // req.body로부터 필드 추출
 app.use(cookieParser());
 
