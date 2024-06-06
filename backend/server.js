@@ -2,6 +2,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import cookieParser from "cookie-parser";
+import path from "path";
 
 // 파일 import
 import authRoutes from "./routes/auth.routes.js";
@@ -17,6 +18,8 @@ dotenv.config();
 // const app = express(); -> socket.js로 옮김.
 const PORT = process.env.PORT || 5000;
 
+const __dirname = path.resolve(); // 배포 준비
+
 connectToMongoDB();
 
 // 미들웨어 
@@ -26,6 +29,12 @@ app.use(cookieParser());
 app.use("/api/auth", authRoutes)
 app.use("/api/messages", messageRoutes)
 app.use("/api/users", userRoutes)
+
+app.use(express.static(path.join(__dirname,"/frontend/dist"))); // express.static 미들웨어 이용해서 dist폴더로 포함
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
+})
 
 server.listen(PORT, () => { // socket 생성 후 app을 server로 변경함.
     connectToMongoDB();
