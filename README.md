@@ -30,7 +30,7 @@
 ---
 ## 👀 작업 중 입니다. (24.06.05) <br><br>
 
-<img src="https://github.com/chorok5/CHAT-APP/assets/157563710/48a19b19-a61a-4448-b12c-25f13af2b6fb" width="700"/><br><br>
+<img src="https://github.com/chorok5/CHAT-APP/assets/157563710/fc9d8e8f-3446-47e4-8557-e13ca6262c74" width="700"/><br><br>
 <img src="https://github.com/chorok5/CHAT-APP/assets/157563710/6dd4e010-6a6b-4785-86ba-cca3ca252ec5" width="700"/><br><br>
 <img src="https://github.com/chorok5/CHAT-APP/assets/157563710/2a54f4d7-6d1b-4ef7-8a8c-9a1515a15119" width="700"/><br>
 
