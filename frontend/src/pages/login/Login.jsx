@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import useLogin from '../../hooks/useLogin';
+import { FaGithub } from 'react-icons/fa';
 
 const Login = () => {
 
@@ -19,14 +20,13 @@ const Login = () => {
         <div className='flex flex-col items-center justify-center min-w-96 mx-auto'>
             <div className='w-full p-6 rounded-lg shadow-md bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0'>
                 <h1 className='text-3xl font-semibold text-center text-gray-300'>
-                    Login
-                    <span className='text-blue-500'> ChatApp</span>
-                </h1>
+                <span className='text-blue-500'>ChatApp </span>
+                <span className='text-zinc-300'>Login </span></h1>
 
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label className='label p-2'>
-                            <span className='text-base label-text'>Username</span>
+                            <span className='text-base label-text mt-4'>Username</span>
                         </label>
                         <input type='text' placeholder='Enter username' className='w-full input input-bordered h-10' 
                         value={username}
@@ -56,6 +56,13 @@ const Login = () => {
                             {loading ? <span className='loading loading-spinner'></span> : 'Login'}
                         </button>
                     </div>
+                    <div className='flex items-center justify-center mt-6'>
+                        <a href='https://github.com/chorok5' target='_blank' rel='noopener noreferrer' className='flex items-center text-sm text-gray-600 hover:text-blue-600'>
+                            <FaGithub className='mr-2' size={20} />
+                            chorok5
+                        </a>
+                    </div>
+                    
                 </form>
             </div>
         </div>
