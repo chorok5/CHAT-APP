@@ -29,14 +29,13 @@
 #### * 해당 프로젝트는 유튜브를 참고하여 **학습 목적으로** 제작하였습니다. (https://youtu.be/HwCqsOis894?si=hBzATnpCgUamcEKE)
 
 #### * 참고 자료
-- https://tailwindcss-glassmorphism.vercel.app/
-- https://react-hot-toast.com/
-- https://zustand-demo.pmnd.rs/
-- https://github.com/boringdesigners/boring-avatars-service/blob/main/README.md
+- Tailwind 라이브러리 : https://tailwindcss-glassmorphism.vercel.app/
+- Toast alert : https://react-hot-toast.com/
+- 상태 관리 라이브러리 : https://zustand-demo.pmnd.rs/
+- 랜덤 아바타 : https://github.com/boringdesigners/boring-avatars-service/blob/main/README.md
 ---
 ---
 ## 👀 Screenshot <br><br>
-
 <img src="https://github.com/chorok5/CHAT-APP/assets/157563710/fc9d8e8f-3446-47e4-8557-e13ca6262c74" width="700"/><br><br>
 <img src="https://github.com/chorok5/CHAT-APP/assets/157563710/6dd4e010-6a6b-4785-86ba-cca3ca252ec5" width="700"/><br><br>
 
