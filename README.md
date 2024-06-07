@@ -1,6 +1,6 @@
 # [학습 프로젝트] 실시간 채팅 앱
 
-### 🌐 Render 배포 사이트 https://chat-app-45yk.onrender.com/
+### 🌐 https://chat-app-45yk.onrender.com/
 - 무료 계정으로 배포중이어서 사이트 접속이 간헐적으로 됩니다.
 - 새로고침 또는 다른 브라우저로의 접속 시도가 필요할 수도 있습니다.🙄
 ---
@@ -38,6 +38,4 @@
 
 <img src="https://github.com/chorok5/CHAT-APP/assets/157563710/fc9d8e8f-3446-47e4-8557-e13ca6262c74" width="700"/><br><br>
 <img src="https://github.com/chorok5/CHAT-APP/assets/157563710/6dd4e010-6a6b-4785-86ba-cca3ca252ec5" width="700"/><br><br>
-<img src="https://github.com/chorok5/CHAT-APP/assets/157563710/2a54f4d7-6d1b-4ef7-8a8c-9a1515a15119" width="700"/><br>
-
 
