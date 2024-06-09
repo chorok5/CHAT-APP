@@ -91,7 +91,7 @@ const SignUp = () => {
                         </button>
                     </div>
                     <div className='flex items-center justify-center mt-6'>
-                        <a href='https://github.com/chorok5' target='_blank' rel='noopener noreferrer' className='flex items-center text-sm text-gray-600 hover:text-blue-600'>
+                        <a href='https://github.com/chorok5/CHAT-APP.git' target='_blank' rel='noopener noreferrer' className='flex items-center text-sm text-gray-600 hover:text-blue-600'>
                             <FaGithub className='mr-2' size={20} />
                             chorok5
                         </a>
