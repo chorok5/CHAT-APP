@@ -1,8 +1,9 @@
 # [학습 프로젝트] 실시간 채팅 앱
 
-### 🌐 Render 배포 사이트 https://chat-app-45yk.onrender.com/
+### 🌐 https://chat-app-45yk.onrender.com/
 - 무료 계정으로 배포중이어서 사이트 접속이 간헐적으로 됩니다.
 - 새로고침 또는 다른 브라우저로의 접속 시도가 필요할 수도 있습니다.🙄
+- 가입 후 로그인이 필요합니다. (또는 Id : test1 / Pw : 111111)
 ---
 ### 🐣 목적
 - 새로운 자바스크립트 기반의 프레임워크 및 라이브러리를 학습하기 위해 실시간 채팅 앱 프로젝트를 선택함.
@@ -28,16 +29,13 @@
 #### * 해당 프로젝트는 유튜브를 참고하여 **학습 목적으로** 제작하였습니다. (https://youtu.be/HwCqsOis894?si=hBzATnpCgUamcEKE)
 
 #### * 참고 자료
-- https://tailwindcss-glassmorphism.vercel.app/
-- https://react-hot-toast.com/
-- https://zustand-demo.pmnd.rs/
-- https://github.com/boringdesigners/boring-avatars-service/blob/main/README.md
+- Tailwind 라이브러리 : https://tailwindcss-glassmorphism.vercel.app/
+- Toast alert : https://react-hot-toast.com/
+- 상태 관리 라이브러리 : https://zustand-demo.pmnd.rs/
+- 랜덤 아바타 : https://github.com/boringdesigners/boring-avatars-service/blob/main/README.md
 ---
 ---
 ## 👀 Screenshot <br><br>
-
 <img src="https://github.com/chorok5/CHAT-APP/assets/157563710/fc9d8e8f-3446-47e4-8557-e13ca6262c74" width="700"/><br><br>
 <img src="https://github.com/chorok5/CHAT-APP/assets/157563710/6dd4e010-6a6b-4785-86ba-cca3ca252ec5" width="700"/><br><br>
-<img src="https://github.com/chorok5/CHAT-APP/assets/157563710/2a54f4d7-6d1b-4ef7-8a8c-9a1515a15119" width="700"/><br>
-
 
