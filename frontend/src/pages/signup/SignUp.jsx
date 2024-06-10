@@ -77,7 +77,7 @@ const SignUp = () => {
                         />
                     </div>
 
-                    {/* <GenderCheckbox onCheckboxChange={handleCheckboxChange} selectedGender={inputs.gender}/> */}
+                    <GenderCheckbox onCheckboxChange={handleCheckboxChange} selectedGender={inputs.gender}/>
 
                     <Link to={'/login'} className='text-sm hover:underline hover:text-blue-600 mt-6 mb-2 inline-block' href='#'>
                         Already have an account?
